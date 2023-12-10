@@ -2,10 +2,6 @@ import 'dart:convert';
 
 import 'package:chopper/chopper.dart' as chopper;
 import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:http/http.dart' as http;
-import 'package:path_provider_platform_interface/path_provider_platform_interface.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_base_code/app/constants/enum.dart';
 import 'package:flutter_base_code/app/helpers/injection.dart';
 import 'package:flutter_base_code/bootstrap.dart';
@@ -13,6 +9,10 @@ import 'package:flutter_base_code/core/data/model/user.dto.dart';
 import 'package:flutter_base_code/core/domain/model/user.dart';
 import 'package:flutter_base_code/features/home/data/model/post.dto.dart';
 import 'package:flutter_base_code/features/home/domain/model/post.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:http/http.dart' as http;
+import 'package:path_provider_platform_interface/path_provider_platform_interface.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../flutter_test_config.dart';
 import 'mock_path_provider_platform.dart';

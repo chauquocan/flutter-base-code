@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:flutter_base_code/app/constants/enum.dart';
+import 'package:go_router/go_router.dart';
 
 // ignore_for_file: prefer-match-file-name
 final class FadeTransitionPage extends CustomTransitionPage<void> {

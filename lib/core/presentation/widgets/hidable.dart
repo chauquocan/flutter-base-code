@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_base_code/core/domain/bloc/hidable/hidable_bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class Hidable extends StatelessWidget {
   const Hidable({required this.child, super.key});

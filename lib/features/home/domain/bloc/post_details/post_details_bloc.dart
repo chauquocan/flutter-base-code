@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:injectable/injectable.dart';
 import 'package:flutter_base_code/app/helpers/extensions/cubit_ext.dart';
 import 'package:flutter_base_code/core/domain/model/value_object.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 part 'post_details_bloc.freezed.dart';

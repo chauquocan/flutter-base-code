@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 import 'package:flutter_base_code/app/helpers/extensions/build_context_ext.dart';
 import 'package:flutter_base_code/app/helpers/injection.dart';
 import 'package:flutter_base_code/app/themes/app_theme.dart';
@@ -8,6 +6,8 @@ import 'package:flutter_base_code/core/presentation/widgets/connectivity_checker
 import 'package:flutter_base_code/core/presentation/widgets/flutter_base_code_app_bar.dart';
 import 'package:flutter_base_code/features/home/domain/bloc/post_details/post_details_bloc.dart';
 import 'package:flutter_base_code/features/home/domain/model/post.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class PostDetailsWebview extends StatelessWidget {

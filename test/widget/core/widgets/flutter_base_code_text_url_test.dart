@@ -1,8 +1,8 @@
 import 'package:alchemist/alchemist.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_base_code/core/domain/model/value_object.dart';
 import 'package:flutter_base_code/core/presentation/widgets/flutter_base_code_text_url.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 import '../../../utils/test_utils.dart';
 

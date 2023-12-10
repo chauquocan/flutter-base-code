@@ -1,8 +1,8 @@
-import 'package:fpdart/fpdart.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter_base_code/app/constants/enum.dart';
 import 'package:flutter_base_code/core/domain/model/failure.dart';
 import 'package:flutter_base_code/core/domain/model/value_object.dart';
+import 'package:fpdart/fpdart.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'user.freezed.dart';
 

@@ -1,8 +1,8 @@
 import 'package:alchemist/alchemist.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_base_code/core/presentation/widgets/flutter_base_code_avatar.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail_image_network/mocktail_image_network.dart';
-import 'package:flutter_base_code/core/presentation/widgets/flutter_base_code_avatar.dart';
 
 import '../../../utils/test_utils.dart';
 

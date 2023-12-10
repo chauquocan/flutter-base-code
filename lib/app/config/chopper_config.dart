@@ -3,8 +3,6 @@ import 'dart:io';
 import 'package:chopper/chopper.dart';
 import 'package:crypto/crypto.dart';
 import 'package:flutter/foundation.dart';
-import 'package:http/io_client.dart';
-import 'package:pretty_chopper_logger/pretty_chopper_logger.dart';
 import 'package:flutter_base_code/app/config/app_config.dart';
 import 'package:flutter_base_code/app/constants/enum.dart';
 import 'package:flutter_base_code/app/constants/trusted_cetificate.dart';
@@ -15,6 +13,8 @@ import 'package:flutter_base_code/features/auth/data/model/login_response.dto.da
 import 'package:flutter_base_code/features/auth/data/service/auth_service.dart';
 import 'package:flutter_base_code/features/home/data/model/post.dto.dart';
 import 'package:flutter_base_code/features/home/data/service/post_service.dart';
+import 'package:http/io_client.dart';
+import 'package:pretty_chopper_logger/pretty_chopper_logger.dart';
 
 final class ChopperConfig {
   final Uri _baseUrl = Uri.parse(AppConfig.baseApiUrl);

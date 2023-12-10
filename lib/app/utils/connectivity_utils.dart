@@ -3,14 +3,14 @@ import 'dart:io';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/foundation.dart';
-import 'package:fpdart/fpdart.dart';
-import 'package:http/http.dart' as http;
-import 'package:injectable/injectable.dart';
-import 'package:rxdart/subjects.dart';
 import 'package:flutter_base_code/app/constants/constant.dart';
 import 'package:flutter_base_code/app/constants/enum.dart';
 import 'package:flutter_base_code/app/helpers/extensions/int_ext.dart';
 import 'package:flutter_base_code/app/helpers/extensions/status_code_ext.dart';
+import 'package:fpdart/fpdart.dart';
+import 'package:http/http.dart' as http;
+import 'package:injectable/injectable.dart';
+import 'package:rxdart/subjects.dart';
 
 @lazySingleton
 final class ConnectivityUtils {

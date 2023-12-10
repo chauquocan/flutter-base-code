@@ -1,16 +1,16 @@
 import 'package:alchemist/alchemist.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:go_router/go_router.dart';
-import 'package:mockito/annotations.dart';
-import 'package:mockito/mockito.dart';
 import 'package:flutter_base_code/app/constants/enum.dart';
 import 'package:flutter_base_code/app/constants/route_name.dart';
 import 'package:flutter_base_code/app/themes/app_theme.dart';
 import 'package:flutter_base_code/core/domain/bloc/app_core/app_core_bloc.dart';
 import 'package:flutter_base_code/core/domain/bloc/hidable/hidable_bloc.dart';
 import 'package:flutter_base_code/core/presentation/widgets/flutter_base_code_nav_bar.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:go_router/go_router.dart';
+import 'package:mockito/annotations.dart';
+import 'package:mockito/mockito.dart';
 
 import '../../../utils/mock_go_router_provider.dart';
 import '../../../utils/mock_localization.dart';

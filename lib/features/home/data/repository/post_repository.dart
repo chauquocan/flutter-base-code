@@ -1,8 +1,6 @@
 import 'dart:developer';
 
 import 'package:chopper/chopper.dart' as chopper;
-import 'package:fpdart/fpdart.dart';
-import 'package:injectable/injectable.dart';
 import 'package:flutter_base_code/app/constants/enum.dart';
 import 'package:flutter_base_code/app/helpers/extensions/int_ext.dart';
 import 'package:flutter_base_code/app/helpers/extensions/status_code_ext.dart';
@@ -11,6 +9,8 @@ import 'package:flutter_base_code/features/home/data/model/post.dto.dart';
 import 'package:flutter_base_code/features/home/data/service/post_service.dart';
 import 'package:flutter_base_code/features/home/domain/interface/i_post_repository.dart';
 import 'package:flutter_base_code/features/home/domain/model/post.dart';
+import 'package:fpdart/fpdart.dart';
+import 'package:injectable/injectable.dart';
 
 // ignore_for_file: avoid_dynamic_calls
 @LazySingleton(as: IPostRepository)

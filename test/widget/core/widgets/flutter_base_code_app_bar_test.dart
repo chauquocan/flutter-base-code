@@ -1,11 +1,11 @@
 import 'package:alchemist/alchemist.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_base_code/core/presentation/widgets/flutter_base_code_app_bar.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:mocktail_image_network/mocktail_image_network.dart';
-import 'package:flutter_base_code/core/presentation/widgets/flutter_base_code_app_bar.dart';
 
 import '../../../utils/mock_go_router_provider.dart';
 import '../../../utils/test_utils.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base_code/app/helpers/injection.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
-import 'package:flutter_base_code/app/helpers/injection.dart';
 
 @injectable
 final class GoRouteObserver extends NavigatorObserver {

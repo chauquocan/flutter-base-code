@@ -1,8 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:injectable/injectable.dart';
 import 'package:flutter_base_code/app/constants/enum.dart';
 import 'package:flutter_base_code/app/constants/route_name.dart';
 import 'package:flutter_base_code/app/helpers/injection.dart';
@@ -16,6 +14,8 @@ import 'package:flutter_base_code/features/home/domain/model/post.dart';
 import 'package:flutter_base_code/features/home/presentation/views/home_screen.dart';
 import 'package:flutter_base_code/features/home/presentation/views/post_details_webview.dart';
 import 'package:flutter_base_code/features/profile/presentation/views/profile_screen.dart';
+import 'package:go_router/go_router.dart';
+import 'package:injectable/injectable.dart';
 
 part 'app_routes.dart';
 

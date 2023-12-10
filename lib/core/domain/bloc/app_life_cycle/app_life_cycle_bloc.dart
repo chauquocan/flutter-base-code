@@ -3,9 +3,9 @@ import 'dart:developer';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_base_code/app/helpers/extensions/cubit_ext.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:flutter_base_code/app/helpers/extensions/cubit_ext.dart';
 
 part 'app_life_cycle_bloc.freezed.dart';
 part 'app_life_cycle_state.dart';

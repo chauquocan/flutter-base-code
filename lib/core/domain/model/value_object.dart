@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:fpdart/fpdart.dart';
-import 'package:uuid/uuid.dart';
 import 'package:flutter_base_code/core/domain/model/failure.dart';
 import 'package:flutter_base_code/core/domain/model/validators.dart';
+import 'package:fpdart/fpdart.dart';
+import 'package:uuid/uuid.dart';
 
 @immutable
 abstract class ValueObject<T> {

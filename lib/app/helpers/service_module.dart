@@ -1,11 +1,11 @@
 import 'package:chopper/chopper.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:injectable/injectable.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_base_code/app/helpers/injection.dart';
 import 'package:flutter_base_code/core/data/service/user_service.dart';
 import 'package:flutter_base_code/features/auth/data/service/auth_service.dart';
 import 'package:flutter_base_code/features/home/data/service/post_service.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:injectable/injectable.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 @module
 abstract class ServiceModule {

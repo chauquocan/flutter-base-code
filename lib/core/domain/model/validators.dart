@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:crypto/crypto.dart';
 import 'package:dartx/dartx.dart';
 import 'package:email_validator/email_validator.dart';
-import 'package:fpdart/fpdart.dart';
 import 'package:flutter_base_code/core/domain/model/failure.dart';
+import 'package:fpdart/fpdart.dart';
 
 Either<Failure, String> validateEmailAddress(String email) {
   final bool isEmailValid = EmailValidator.validate(email, true);

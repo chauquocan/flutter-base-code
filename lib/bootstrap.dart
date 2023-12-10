@@ -2,9 +2,6 @@ import 'dart:async';
 
 import 'package:chopper/chopper.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:logger/logger.dart';
 import 'package:flutter_base_code/app/config/chopper_config.dart';
 import 'package:flutter_base_code/app/config/url_strategy_native.dart'
     if (dart.library.html) 'package:flutter_base_code/app/config/url_strategy_web.dart';
@@ -12,6 +9,9 @@ import 'package:flutter_base_code/app/constants/enum.dart';
 import 'package:flutter_base_code/app/generated/assets.gen.dart';
 import 'package:flutter_base_code/app/helpers/injection.dart';
 import 'package:flutter_base_code/app/observers/app_bloc_observer.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:logger/logger.dart';
 
 Future<void> bootstrap(FutureOr<Widget> Function() builder, Env env) async {
   urlConfig();

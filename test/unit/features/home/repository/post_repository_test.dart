@@ -1,13 +1,13 @@
 import 'package:chopper/chopper.dart' as chopper;
-import 'package:flutter_test/flutter_test.dart';
-import 'package:fpdart/fpdart.dart';
-import 'package:mockito/annotations.dart';
-import 'package:mockito/mockito.dart';
 import 'package:flutter_base_code/core/domain/model/failure.dart';
 import 'package:flutter_base_code/features/home/data/model/post.dto.dart';
 import 'package:flutter_base_code/features/home/data/repository/post_repository.dart';
 import 'package:flutter_base_code/features/home/data/service/post_service.dart';
 import 'package:flutter_base_code/features/home/domain/model/post.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:fpdart/fpdart.dart';
+import 'package:mockito/annotations.dart';
+import 'package:mockito/mockito.dart';
 
 import '../../../../utils/test_utils.dart';
 import 'post_repository_test.mocks.dart';

@@ -1,8 +1,8 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_base_code/app/constants/enum.dart';
 import 'package:flutter_base_code/core/domain/bloc/app_core/app_core_bloc.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   late AppCoreBloc appCoreBloc;

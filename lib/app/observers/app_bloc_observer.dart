@@ -1,7 +1,7 @@
+import 'package:flutter_base_code/app/helpers/injection.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
-import 'package:flutter_base_code/app/helpers/injection.dart';
 
 // ignore_for_file: avoid_dynamic_calls
 @singleton

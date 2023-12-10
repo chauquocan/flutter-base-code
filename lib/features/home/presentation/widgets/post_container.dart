@@ -1,9 +1,6 @@
 import 'package:dartx/dartx.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:go_router/go_router.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_base_code/app/constants/route_name.dart';
 import 'package:flutter_base_code/app/helpers/extensions/build_context_ext.dart';
 import 'package:flutter_base_code/app/themes/app_spacing.dart';
@@ -11,6 +8,9 @@ import 'package:flutter_base_code/core/presentation/widgets/flutter_base_code_te
 import 'package:flutter_base_code/features/home/domain/model/post.dart';
 import 'package:flutter_base_code/features/home/presentation/widgets/post_container_footer.dart';
 import 'package:flutter_base_code/features/home/presentation/widgets/post_container_header.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:go_router/go_router.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PostContainer extends StatelessWidget {
   const PostContainer({required this.post, super.key});

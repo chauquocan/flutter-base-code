@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 import 'package:flutter_base_code/app/config/scroll_behavior_config.dart';
 import 'package:flutter_base_code/app/constants/constant.dart';
 import 'package:flutter_base_code/app/generated/l10n.dart';
@@ -13,6 +10,9 @@ import 'package:flutter_base_code/core/domain/bloc/app_life_cycle/app_life_cycle
 import 'package:flutter_base_code/core/domain/bloc/hidable/hidable_bloc.dart';
 import 'package:flutter_base_code/core/domain/bloc/theme/theme_bloc.dart';
 import 'package:flutter_base_code/features/auth/domain/bloc/auth/auth_bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
 class App extends StatelessWidget {
   App({super.key});

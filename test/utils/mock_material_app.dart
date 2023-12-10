@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_base_code/app/config/scroll_behavior_config.dart';
 import 'package:flutter_base_code/app/constants/constant.dart';
 import 'package:flutter_base_code/app/generated/l10n.dart';
 import 'package:flutter_base_code/app/themes/app_theme.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class MockMaterialApp extends StatelessWidget {
   const MockMaterialApp({required this.child, super.key});

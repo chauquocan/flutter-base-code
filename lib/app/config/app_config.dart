@@ -1,5 +1,5 @@
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_base_code/app/constants/enum.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 final class AppConfig {
   static Env get environment => switch (dotenv.get('ENV')) {

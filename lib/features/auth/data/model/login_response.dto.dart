@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter_base_code/core/domain/model/value_object.dart';
 import 'package:flutter_base_code/features/auth/domain/model/login_response.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'login_response.dto.freezed.dart';
 part 'login_response.dto.g.dart';

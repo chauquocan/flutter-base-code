@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:flutter_base_code/app/generated/l10n.dart';
+import 'package:go_router/go_router.dart';
 
 extension BuildContextExt on BuildContext {
   AppLocalizations get l10n => AppLocalizations.of(this);

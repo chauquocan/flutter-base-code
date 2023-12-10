@@ -1,13 +1,12 @@
 import 'package:dartx/dartx.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:html_unescape/html_unescape.dart';
 import 'package:flutter_base_code/app/helpers/converters/timestamp_to_datetime.dart';
 import 'package:flutter_base_code/app/helpers/extensions/color_ext.dart';
-
 import 'package:flutter_base_code/app/themes/app_colors.dart';
 import 'package:flutter_base_code/core/domain/model/validators.dart';
 import 'package:flutter_base_code/core/domain/model/value_object.dart';
 import 'package:flutter_base_code/features/home/domain/model/post.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:html_unescape/html_unescape.dart';
 
 part 'post.dto.freezed.dart';
 part 'post.dto.g.dart';

@@ -1,9 +1,9 @@
+import 'package:flutter_base_code/core/data/repository/local_storage_repository.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:flutter_base_code/core/data/repository/local_storage_repository.dart';
 
 import 'local_repository_test.mocks.dart';
 

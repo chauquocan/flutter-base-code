@@ -3,13 +3,13 @@ import 'dart:io';
 import 'package:flash/flash.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:safe_device/safe_device.dart';
 import 'package:flutter_base_code/app/helpers/extensions/build_context_ext.dart';
 import 'package:flutter_base_code/app/themes/app_spacing.dart';
 import 'package:flutter_base_code/core/presentation/widgets/app_title.dart';
 import 'package:flutter_base_code/features/auth/domain/bloc/auth/auth_bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:safe_device/safe_device.dart';
 
 class SplashScreen extends HookWidget {
   const SplashScreen({super.key});

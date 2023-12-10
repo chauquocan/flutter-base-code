@@ -1,8 +1,6 @@
 import 'dart:developer';
 
 import 'package:chopper/chopper.dart';
-import 'package:fpdart/fpdart.dart';
-import 'package:injectable/injectable.dart';
 import 'package:flutter_base_code/app/constants/enum.dart';
 import 'package:flutter_base_code/app/helpers/extensions/int_ext.dart';
 import 'package:flutter_base_code/app/helpers/extensions/status_code_ext.dart';
@@ -11,6 +9,8 @@ import 'package:flutter_base_code/core/data/service/user_service.dart';
 import 'package:flutter_base_code/core/domain/interface/i_user_repository.dart';
 import 'package:flutter_base_code/core/domain/model/failure.dart';
 import 'package:flutter_base_code/core/domain/model/user.dart';
+import 'package:fpdart/fpdart.dart';
+import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: IUserRepository)
 class UserRepository implements IUserRepository {

@@ -1,8 +1,6 @@
 import 'dart:developer';
 
 import 'package:chopper/chopper.dart';
-import 'package:fpdart/fpdart.dart';
-import 'package:injectable/injectable.dart';
 import 'package:flutter_base_code/app/constants/enum.dart';
 import 'package:flutter_base_code/app/helpers/extensions/int_ext.dart';
 import 'package:flutter_base_code/app/helpers/extensions/status_code_ext.dart';
@@ -12,6 +10,8 @@ import 'package:flutter_base_code/core/domain/model/value_object.dart';
 import 'package:flutter_base_code/features/auth/data/model/login_response.dto.dart';
 import 'package:flutter_base_code/features/auth/data/service/auth_service.dart';
 import 'package:flutter_base_code/features/auth/domain/interface/i_auth_repository.dart';
+import 'package:fpdart/fpdart.dart';
+import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: IAuthRepository)
 class AuthRepository implements IAuthRepository {

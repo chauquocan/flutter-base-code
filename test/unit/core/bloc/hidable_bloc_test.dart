@@ -1,6 +1,6 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_base_code/core/domain/bloc/hidable/hidable_bloc.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   late HidableBloc hidableBloc;

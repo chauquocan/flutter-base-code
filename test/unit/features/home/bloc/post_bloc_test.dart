@@ -1,8 +1,4 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:fpdart/fpdart.dart';
-import 'package:mockito/annotations.dart';
-import 'package:mockito/mockito.dart';
 import 'package:flutter_base_code/app/constants/enum.dart';
 import 'package:flutter_base_code/core/domain/interface/i_local_storage_repository.dart';
 import 'package:flutter_base_code/core/domain/model/failure.dart';
@@ -10,6 +6,10 @@ import 'package:flutter_base_code/features/home/data/model/post.dto.dart';
 import 'package:flutter_base_code/features/home/domain/bloc/post/post_bloc.dart';
 import 'package:flutter_base_code/features/home/domain/interface/i_post_repository.dart';
 import 'package:flutter_base_code/features/home/domain/model/post.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:fpdart/fpdart.dart';
+import 'package:mockito/annotations.dart';
+import 'package:mockito/mockito.dart';
 
 import 'post_bloc_test.mocks.dart';
 

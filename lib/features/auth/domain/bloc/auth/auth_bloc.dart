@@ -1,14 +1,14 @@
 import 'dart:developer';
 
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fpdart/fpdart.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:injectable/injectable.dart';
 import 'package:flutter_base_code/app/helpers/extensions/cubit_ext.dart';
 import 'package:flutter_base_code/core/domain/interface/i_user_repository.dart';
 import 'package:flutter_base_code/core/domain/model/failure.dart';
 import 'package:flutter_base_code/core/domain/model/user.dart';
 import 'package:flutter_base_code/features/auth/domain/interface/i_auth_repository.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fpdart/fpdart.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 
 part 'auth_bloc.freezed.dart';
 part 'auth_state.dart';

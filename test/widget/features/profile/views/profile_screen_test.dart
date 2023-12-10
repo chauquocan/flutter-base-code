@@ -1,13 +1,13 @@
 import 'package:alchemist/alchemist.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/annotations.dart';
-import 'package:mockito/mockito.dart';
 import 'package:flutter_base_code/app/constants/enum.dart';
 import 'package:flutter_base_code/core/domain/bloc/app_core/app_core_bloc.dart';
 import 'package:flutter_base_code/features/auth/domain/bloc/auth/auth_bloc.dart';
 import 'package:flutter_base_code/features/profile/presentation/views/profile_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/annotations.dart';
+import 'package:mockito/mockito.dart';
 
 import '../../../../utils/golden_test_device_scenario.dart';
 import '../../../../utils/mock_material_app.dart';
