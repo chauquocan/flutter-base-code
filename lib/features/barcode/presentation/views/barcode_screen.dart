@@ -18,7 +18,7 @@ class BarcodeScreen extends StatefulHookWidget {
 }
 
 class _BarcodeScreenState extends State<BarcodeScreen> {
-  String _scanBarcode = 'Unknown';
+  String _scanBarcode = '0000000000000';
 
   @override
   void initState() {
@@ -39,6 +39,8 @@ class _BarcodeScreenState extends State<BarcodeScreen> {
     // message was in flight, we want to discard the reply rather than calling
     // setState to update our non-existent appearance.
     if (!mounted) return;
+
+    if (barcodeScanRes == '-1') return;
 
     setState(() {
       _scanBarcode = barcodeScanRes;
@@ -68,7 +70,8 @@ class _BarcodeScreenState extends State<BarcodeScreen> {
                 children: <Widget>[
                   BarcodeWidget(
                     data: _scanBarcode,
-                    /// Bar code format 
+
+                    /// Bar code format
                     barcode: Barcode.isbn(),
                     style: const TextStyle(fontSize: 20),
                   ),
