@@ -10,6 +10,7 @@ import 'package:flutter_base_code/core/presentation/views/main_screen.dart';
 import 'package:flutter_base_code/core/presentation/views/splash_screen.dart';
 import 'package:flutter_base_code/features/auth/domain/bloc/auth/auth_bloc.dart';
 import 'package:flutter_base_code/features/auth/presentation/views/login_screen.dart';
+import 'package:flutter_base_code/features/barcode/presentation/views/barcode_screen.dart';
 import 'package:flutter_base_code/features/home/domain/model/post.dart';
 import 'package:flutter_base_code/features/home/presentation/views/home_screen.dart';
 import 'package:flutter_base_code/features/home/presentation/views/post_details_webview.dart';

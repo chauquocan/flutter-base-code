@@ -5,6 +5,7 @@ enum RouteName {
   home('/home'),
   error('/error'),
   profile('/profile'),
+  barcode('/barcode'),
   postDetails(':postId');
 
   const RouteName(this.path);

@@ -7,8 +7,8 @@ import 'package:flutter_base_code/core/presentation/widgets/hidable.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
 
-class FlutterBaseCodeNavBar extends HookWidget {
-  const FlutterBaseCodeNavBar({
+class AppNavBar extends HookWidget {
+  const AppNavBar({
     required this.navigationShell,
     super.key,
   });
@@ -26,6 +26,11 @@ class FlutterBaseCodeNavBar extends HookWidget {
                 icon: const Icon(Icons.home_outlined),
                 selectedIcon: const Icon(Icons.home),
                 label: context.l10n.common_home.capitalize(),
+              ),
+              const NavigationDestination(
+                icon: Icon(Icons.camera_alt_outlined),
+                selectedIcon: Icon(Icons.camera_alt),
+                label: 'Demo',
               ),
               NavigationDestination(
                 icon: const Icon(Icons.account_circle_outlined),
