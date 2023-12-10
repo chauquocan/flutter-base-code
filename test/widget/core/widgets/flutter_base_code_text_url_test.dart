@@ -7,7 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import '../../../utils/test_utils.dart';
 
 void main() {
-  group('FlutterBaseCodeTextUrl Widget Tests', () {
+  group('AppTextUrl Widget Tests', () {
     int count = 0;
     goldenTest(
       'renders correctly',
@@ -19,7 +19,7 @@ void main() {
             name: 'default',
             child: SizedBox(
               height: 20,
-              child: FlutterBaseCodeTextUrl(
+              child: AppTextUrl(
                 url: Url('https://www.example.com'),
                 onTap: () => count++,
               ),
@@ -29,7 +29,7 @@ void main() {
             name: 'no icon',
             child: SizedBox(
               height: 20,
-              child: FlutterBaseCodeTextUrl(
+              child: AppTextUrl(
                 url: Url('https://www.example.com'),
                 onTap: () => count++,
                 isShowIcon: false,

@@ -3,8 +3,8 @@ import 'package:flutter_base_code/app/constants/enum.dart';
 import 'package:flutter_base_code/app/helpers/extensions/build_context_ext.dart';
 import 'package:flutter_base_code/app/themes/app_spacing.dart';
 
-class FlutterBaseCodeButton extends StatelessWidget {
-  const FlutterBaseCodeButton({
+class AppButton extends StatelessWidget {
+  const AppButton({
     required this.text,
     required this.onPressed,
     this.isEnabled = true,
@@ -40,8 +40,7 @@ class FlutterBaseCodeButton extends StatelessWidget {
         child: SizedBox(
           width: isExpanded ? Insets.infinity : null,
           child: Padding(
-            padding: padding ??
-                const EdgeInsets.symmetric(horizontal: Insets.medium),
+            padding: padding ?? const EdgeInsets.symmetric(horizontal: Insets.medium),
             child: _ButtonType(
               text: text,
               buttonType: buttonType,
@@ -263,8 +262,7 @@ class _ButtonContent extends StatelessWidget {
             Insets.medium,
           )
         : const EdgeInsets.all(Insets.medium);
-    final TextStyle defaultTextStyle =
-        context.textTheme.bodyLarge!.copyWith(color: defaultTextColor);
+    final TextStyle defaultTextStyle = context.textTheme.bodyLarge!.copyWith(color: defaultTextColor);
     return SizedBox(
       width: isExpanded ? Insets.infinity : null,
       child: Padding(

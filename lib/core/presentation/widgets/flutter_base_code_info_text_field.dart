@@ -3,8 +3,8 @@ import 'package:flutter_base_code/app/helpers/extensions/build_context_ext.dart'
 import 'package:flutter_base_code/app/themes/app_spacing.dart';
 import 'package:flutter_base_code/app/themes/app_theme.dart';
 
-class FlutterBaseCodeInfoTextField extends StatelessWidget {
-  const FlutterBaseCodeInfoTextField({
+class AppInfoTextField extends StatelessWidget {
+  const AppInfoTextField({
     required this.title,
     required this.description,
     this.isExpanded = true,
@@ -47,8 +47,7 @@ class FlutterBaseCodeInfoTextField extends StatelessWidget {
               Text(
                 description,
                 style: context.textTheme.titleMedium?.copyWith(
-                  color: descriptionColor ??
-                      context.colorScheme.onSecondaryContainer,
+                  color: descriptionColor ?? context.colorScheme.onSecondaryContainer,
                 ),
               ),
             ],

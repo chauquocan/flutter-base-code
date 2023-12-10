@@ -21,10 +21,8 @@ class LoginScreen extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextEditingController passwordTextController =
-        useTextEditingController();
-    final TextEditingController emailTextController =
-        useTextEditingController();
+    final TextEditingController passwordTextController = useTextEditingController();
+    final TextEditingController emailTextController = useTextEditingController();
 
     return BlocProvider<LoginBloc>(
       create: (BuildContext context) => getIt<LoginBloc>(),
@@ -39,8 +37,7 @@ class LoginScreen extends HookWidget {
 
           return PopScope(
             canPop: false,
-            onPopInvoked: (bool didPop) async =>
-                DialogUtils.showExitDialog(context),
+            onPopInvoked: (bool didPop) async => DialogUtils.showExitDialog(context),
             child: ConnectivityChecker.scaffold(
               backgroundColor: context.colorScheme.background,
               body: Center(
@@ -55,28 +52,23 @@ class LoginScreen extends HookWidget {
                       Expanded(
                         child: Column(
                           children: <Widget>[
-                            FlutterBaseCodeTextField(
+                            AppTextField(
                               controller: emailTextController,
                               labelText: context.l10n.login__label_text__email,
-                              hintText:
-                                  context.l10n.login__text_field_hint__email,
-                              onChanged: (String value) => context
-                                  .read<LoginBloc>()
-                                  .onEmailAddressChanged(value),
+                              hintText: context.l10n.login__text_field_hint__email,
+                              onChanged: (String value) => context.read<LoginBloc>().onEmailAddressChanged(value),
                               autofocus: true,
                             ),
                             Gap.large(),
-                            FlutterBaseCodeTextField(
+                            AppTextField(
                               controller: passwordTextController,
-                              labelText:
-                                  context.l10n.login__label_text__password,
-                              hintText:
-                                  context.l10n.login__text_field_hint__password,
+                              labelText: context.l10n.login__label_text__password,
+                              hintText: context.l10n.login__text_field_hint__password,
                               textInputType: TextInputType.visiblePassword,
                               isPassword: true,
                             ),
                             Gap.xxxlarge(),
-                            FlutterBaseCodeButton(
+                            AppButton(
                               text: context.l10n.login__button_text__login,
                               isEnabled: !state.isLoading,
                               isExpanded: true,

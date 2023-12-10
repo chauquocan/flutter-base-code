@@ -38,25 +38,21 @@ class HomeScreen extends HookWidget {
       backgroundColor: context.colorScheme.background,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(AppTheme.defaultAppBarHeight),
-        child: FlutterBaseCodeAppBar(
+        child: AppAppBar(
           titleColor: context.colorScheme.primary,
           actions: <Widget>[
             IconButton(
-              onPressed: () => context
-                  .read<ThemeBloc>()
-                  .switchTheme(Theme.of(context).brightness),
+              onPressed: () => context.read<ThemeBloc>().switchTheme(Theme.of(context).brightness),
               icon: Theme.of(context).brightness == Brightness.dark
                   ? Icon(Icons.light_mode, color: iconColor)
                   : Icon(Icons.dark_mode, color: iconColor),
             ),
             BlocBuilder<AuthBloc, AuthState>(
-              builder: (BuildContext context, AuthState state) =>
-                  state.maybeWhen(
+              builder: (BuildContext context, AuthState state) => state.maybeWhen(
                 orElse: SizedBox.shrink,
                 authenticated: (User user) => GestureDetector(
-                  onTap: () =>
-                      GoRouter.of(context).goNamed(RouteName.profile.name),
-                  child: FlutterBaseCodeAvatar(
+                  onTap: () => GoRouter.of(context).goNamed(RouteName.profile.name),
+                  child: AppAvatar(
                     size: 32,
                     imageUrl: user.avatar?.getOrCrash(),
                     padding: const EdgeInsets.all(Insets.small),
@@ -96,23 +92,19 @@ class _HomeContent extends HookWidget {
                 _onStateChangeListener(context, state, isDialogShowing),
             builder: (BuildContext context, PostState state) => state.maybeWhen(
               success: (List<Post> posts) => posts.isNotEmpty
-                  ? BlocSelector<AppCoreBloc, AppCoreState,
-                      Map<AppScrollController, ScrollController>>(
+                  ? BlocSelector<AppCoreBloc, AppCoreState, Map<AppScrollController, ScrollController>>(
                       selector: (AppCoreState state) => state.scrollControllers,
                       builder: (
                         BuildContext context,
-                        Map<AppScrollController, ScrollController>
-                            scrollController,
+                        Map<AppScrollController, ScrollController> scrollController,
                       ) =>
                           ListView.separated(
                         padding: const EdgeInsets.only(top: Insets.medium),
                         controller: scrollController.isNotEmpty
                             ? scrollController[AppScrollController.home]
                             : ScrollController(),
-                        itemBuilder: (BuildContext context, int index) =>
-                            PostContainer(post: posts[index]),
-                        separatorBuilder: (BuildContext context, int index) =>
-                            const Gap(Insets.small),
+                        itemBuilder: (BuildContext context, int index) => PostContainer(post: posts[index]),
+                        separatorBuilder: (BuildContext context, int index) => const Gap(Insets.small),
                         itemCount: posts.length,
                       ),
                     )

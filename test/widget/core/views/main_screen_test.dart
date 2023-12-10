@@ -95,7 +95,7 @@ void main() async {}
 //     return (router, navigationShell);
 //   }
 
-//   Widget buildFlutterBaseCodeScreen(
+//   Widget buildAppScreen(
 //     (MockGoRouter, MockStatefulNavigationShell) goRouter,
 //     AuthBloc authBloc,
 //   ) =>
@@ -118,7 +118,7 @@ void main() async {}
 //         ),
 //       );
 
-//   group('FlutterBaseCode Screen Tests', () {
+//   group('App Screen Tests', () {
 //     goldenTest(
 //       'renders correctly',
 //       fileName: 'main_screen'.goldensVersion,
@@ -129,14 +129,14 @@ void main() async {}
 //         children: <Widget>[
 //           GoldenTestDeviceScenario(
 //             name: 'home',
-//             builder: () => buildFlutterBaseCodeScreen(
+//             builder: () => buildAppScreen(
 //               setUpRouter(RouteName.home.path, 0),
 //               setUpAuthBloc(),
 //             ),
 //           ),
 //           GoldenTestDeviceScenario(
 //             name: 'profile',
-//             builder: () => buildFlutterBaseCodeScreen(
+//             builder: () => buildAppScreen(
 //               setUpRouter(RouteName.profile.path, 1),
 //               setUpAuthBloc(),
 //             ),

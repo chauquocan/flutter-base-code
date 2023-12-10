@@ -6,7 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import '../../../utils/test_utils.dart';
 
 void main() {
-  group('FlutterBaseCodeInfoTextField Widget Tests', () {
+  group('AppInfoTextField Widget Tests', () {
     goldenTest(
       'renders correctly',
       fileName: 'flutter_base_code_info_text_field'.goldensVersion,
@@ -15,14 +15,14 @@ void main() {
           GoldenTestScenario(
             name: 'default(expanded)',
             constraints: const BoxConstraints(minWidth: 200),
-            child: const FlutterBaseCodeInfoTextField(
+            child: const AppInfoTextField(
               title: 'Title',
               description: 'Description',
             ),
           ),
           GoldenTestScenario(
             name: 'shrink',
-            child: const FlutterBaseCodeInfoTextField(
+            child: const AppInfoTextField(
               title: 'Title',
               description: 'Description',
               isExpanded: false,

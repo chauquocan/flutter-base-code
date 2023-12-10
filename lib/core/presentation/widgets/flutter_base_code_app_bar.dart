@@ -4,8 +4,8 @@ import 'package:flutter_base_code/app/helpers/extensions/build_context_ext.dart'
 import 'package:flutter_base_code/app/themes/app_spacing.dart';
 import 'package:flutter_base_code/app/themes/app_text_style.dart';
 
-class FlutterBaseCodeAppBar extends StatelessWidget {
-  const FlutterBaseCodeAppBar({
+class AppAppBar extends StatelessWidget {
+  const AppAppBar({
     super.key,
     this.title,
     this.titleColor,

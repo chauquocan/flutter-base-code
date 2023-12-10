@@ -33,7 +33,7 @@ class PostContainer extends StatelessWidget {
                   if (post.urlOverriddenByDest != null)
                     Padding(
                       padding: const EdgeInsets.all(Insets.medium),
-                      child: FlutterBaseCodeTextUrl(
+                      child: AppTextUrl(
                         url: post.urlOverriddenByDest!,
                         onTap: () => launchUrl(
                           Uri.parse(
@@ -50,16 +50,15 @@ class PostContainer extends StatelessWidget {
                           gradient: LinearGradient(
                             begin: Alignment.bottomCenter,
                             end: Alignment.topCenter,
-                            colors:
-                                Theme.of(context).brightness == Brightness.light
-                                    ? <Color>[
-                                        const Color(0xFFf0f4fa),
-                                        const Color(0xFFf0f4fa).withOpacity(0),
-                                      ]
-                                    : <Color>[
-                                        const Color(0xFF202429),
-                                        const Color(0xFF202429).withOpacity(0),
-                                      ],
+                            colors: Theme.of(context).brightness == Brightness.light
+                                ? <Color>[
+                                    const Color(0xFFf0f4fa),
+                                    const Color(0xFFf0f4fa).withOpacity(0),
+                                  ]
+                                : <Color>[
+                                    const Color(0xFF202429),
+                                    const Color(0xFF202429).withOpacity(0),
+                                  ],
                           ),
                         ),
                         constraints: const BoxConstraints(maxHeight: 200),

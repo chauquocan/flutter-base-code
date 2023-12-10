@@ -29,19 +29,16 @@ class PostDetailsWebview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => BlocProvider<PostDetailsBloc>(
-        create: (BuildContext context) =>
-            getIt<PostDetailsBloc>(param1: post.permalink),
-        child:
-            BlocSelector<PostDetailsBloc, PostDetailsState, WebViewController>(
+        create: (BuildContext context) => getIt<PostDetailsBloc>(param1: post.permalink),
+        child: BlocSelector<PostDetailsBloc, PostDetailsState, WebViewController>(
           selector: (PostDetailsState state) => state.controller,
-          builder: (BuildContext context, WebViewController controller) =>
-              PopScope(
+          builder: (BuildContext context, WebViewController controller) => PopScope(
             canPop: false,
             onPopInvoked: (_) async => _onPopInvoked(context, controller),
             child: ConnectivityChecker.scaffold(
               appBar: PreferredSize(
                 preferredSize: Size.fromHeight(AppTheme.defaultAppBarHeight),
-                child: FlutterBaseCodeAppBar(
+                child: AppAppBar(
                   titleColor: context.colorScheme.primary,
                   leading: BackButton(
                     color: context.colorScheme.primary,
@@ -54,12 +51,9 @@ class PostDetailsWebview extends StatelessWidget {
                   children: <Widget>[
                     WebViewWidget(controller: controller),
                     BlocSelector<PostDetailsBloc, PostDetailsState, int>(
-                      selector: (PostDetailsState state) =>
-                          state.loadingProgress,
+                      selector: (PostDetailsState state) => state.loadingProgress,
                       builder: (BuildContext context, int progress) =>
-                          progress != 100
-                              ? LinearProgressIndicator(value: progress / 100)
-                              : const SizedBox.shrink(),
+                          progress != 100 ? LinearProgressIndicator(value: progress / 100) : const SizedBox.shrink(),
                     ),
                   ],
                 ),

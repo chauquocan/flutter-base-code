@@ -24,7 +24,7 @@ void main() {
     when(routerWithOutBack.canPop()).thenAnswer((_) => false);
   });
 
-  group('FlutterBaseCodeAppBar Widget Tests', () {
+  group('AppAppBar Widget Tests', () {
     goldenTest(
       'renders correctly',
       fileName: 'flutter_base_code_app_bar'.goldensVersion,
@@ -39,7 +39,7 @@ void main() {
               preferredSize: Size.fromHeight(AppBar().preferredSize.height),
               child: MockGoRouterProvider(
                 router: routerWithOutBack,
-                child: const FlutterBaseCodeAppBar(),
+                child: const AppAppBar(),
               ),
             ),
           ),
@@ -49,7 +49,7 @@ void main() {
               preferredSize: Size.fromHeight(AppBar().preferredSize.height),
               child: MockGoRouterProvider(
                 router: routerWithOutBack,
-                child: FlutterBaseCodeAppBar(
+                child: AppAppBar(
                   actions: <Widget>[
                     IconButton(
                       onPressed: () => counter++,
@@ -66,7 +66,7 @@ void main() {
               preferredSize: Size.fromHeight(AppBar().preferredSize.height),
               child: MockGoRouterProvider(
                 router: routerWithBack,
-                child: const FlutterBaseCodeAppBar(
+                child: const AppAppBar(
                   leading: BackButton(),
                 ),
               ),
@@ -78,7 +78,7 @@ void main() {
               preferredSize: Size.fromHeight(AppBar().preferredSize.height),
               child: MockGoRouterProvider(
                 router: routerWithBack,
-                child: FlutterBaseCodeAppBar(
+                child: AppAppBar(
                   actions: <Widget>[
                     IconButton(
                       onPressed: () => counter++,

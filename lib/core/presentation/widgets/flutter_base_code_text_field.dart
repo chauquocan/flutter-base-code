@@ -3,8 +3,8 @@ import 'package:flutter_base_code/app/helpers/extensions/build_context_ext.dart'
 import 'package:flutter_base_code/app/themes/app_spacing.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
-class FlutterBaseCodeTextField extends StatelessWidget {
-  const FlutterBaseCodeTextField({
+class AppTextField extends StatelessWidget {
+  const AppTextField({
     required this.controller,
     required this.labelText,
     this.hintText,
@@ -48,16 +48,14 @@ class FlutterBaseCodeTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ColorScheme colorScheme = context.colorScheme;
-    final TextStyle? defaultTextStyle =
-        context.textTheme.bodyLarge?.copyWith(color: colorScheme.onSurface);
+    final TextStyle? defaultTextStyle = context.textTheme.bodyLarge?.copyWith(color: colorScheme.onSurface);
 
     return Semantics(
       key: Key(labelText),
       textField: true,
       label: labelText,
       child: Padding(
-        padding:
-            padding ?? const EdgeInsets.symmetric(horizontal: Insets.medium),
+        padding: padding ?? const EdgeInsets.symmetric(horizontal: Insets.medium),
         child: textInputType == TextInputType.visiblePassword || isPassword
             ? _PasswordTextField(
                 controller: controller,
@@ -132,8 +130,7 @@ class _PasswordTextField extends HookWidget {
   Widget build(BuildContext context) {
     final ValueNotifier<bool> isPasswordHidden = useState<bool>(true);
     final ColorScheme colorScheme = context.colorScheme;
-    final TextStyle? textStyle =
-        context.textTheme.bodyLarge?.copyWith(color: colorScheme.onSurface);
+    final TextStyle? textStyle = context.textTheme.bodyLarge?.copyWith(color: colorScheme.onSurface);
 
     return Row(
       children: <Widget>[
@@ -150,9 +147,7 @@ class _PasswordTextField extends HookWidget {
                   key: const Key('password_icon'),
                   onTap: () => isPasswordHidden.value = !isPasswordHidden.value,
                   child: Icon(
-                    isPasswordHidden.value
-                        ? Icons.visibility_off
-                        : Icons.visibility,
+                    isPasswordHidden.value ? Icons.visibility_off : Icons.visibility,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(

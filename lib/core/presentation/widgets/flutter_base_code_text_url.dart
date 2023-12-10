@@ -4,8 +4,8 @@ import 'package:flutter_base_code/app/themes/app_colors.dart';
 import 'package:flutter_base_code/app/themes/app_spacing.dart';
 import 'package:flutter_base_code/core/domain/model/value_object.dart';
 
-class FlutterBaseCodeTextUrl extends StatelessWidget {
-  const FlutterBaseCodeTextUrl({
+class AppTextUrl extends StatelessWidget {
+  const AppTextUrl({
     required this.url,
     required this.onTap,
     this.style,
@@ -42,8 +42,7 @@ class FlutterBaseCodeTextUrl extends StatelessWidget {
                 padding: const EdgeInsets.only(left: Insets.xxsmall),
                 child: Icon(
                   Icons.open_in_new,
-                  size:
-                      style?.fontSize ?? context.textTheme.bodySmall?.fontSize,
+                  size: style?.fontSize ?? context.textTheme.bodySmall?.fontSize,
                   color: AppColors.defaultTextUrl,
                 ),
               ),

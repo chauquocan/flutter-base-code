@@ -2,8 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_base_code/app/helpers/extensions/build_context_ext.dart';
 
-class FlutterBaseCodeAvatar extends StatelessWidget {
-  const FlutterBaseCodeAvatar({
+class AppAvatar extends StatelessWidget {
+  const AppAvatar({
     required this.size,
     this.imageUrl,
     this.padding,
@@ -38,9 +38,8 @@ class FlutterBaseCodeAvatar extends StatelessWidget {
                     width: size,
                     height: size,
                   ),
-                  errorWidget:
-                      (BuildContext context, String url, dynamic error) =>
-                          Icon(Icons.account_circle, size: size),
+                  errorWidget: (BuildContext context, String url, dynamic error) =>
+                      Icon(Icons.account_circle, size: size),
                   fit: BoxFit.cover,
                 )
               : Icon(Icons.account_circle, size: size),

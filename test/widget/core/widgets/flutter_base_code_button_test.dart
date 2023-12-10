@@ -7,13 +7,13 @@ import 'package:flutter_test/flutter_test.dart';
 import '../../../utils/test_utils.dart';
 
 void main() {
-  group('FlutterBaseCodeButton Widget Tests', () {
+  group('AppButton Widget Tests', () {
     int counter = 0;
 
     List<Widget> buildButtons(Widget? icon, ButtonType buttonType) => <Widget>[
           GoldenTestScenario(
             name: 'default ${buttonType.name} button',
-            child: FlutterBaseCodeButton(
+            child: AppButton(
               text: 'Button',
               buttonType: buttonType,
               onPressed: () => counter++,
@@ -23,7 +23,7 @@ void main() {
           GoldenTestScenario(
             name: 'isExpanded ${buttonType.name} button',
             constraints: const BoxConstraints(minWidth: 200),
-            child: FlutterBaseCodeButton(
+            child: AppButton(
               text: 'Button',
               isExpanded: true,
               buttonType: buttonType,
@@ -33,7 +33,7 @@ void main() {
           ),
           GoldenTestScenario(
             name: 'isDisabled ${buttonType.name} button',
-            child: FlutterBaseCodeButton(
+            child: AppButton(
               text: 'Button',
               isEnabled: false,
               buttonType: buttonType,
@@ -44,7 +44,7 @@ void main() {
           GoldenTestScenario(
             name: 'isDisabled & isExpanded ${buttonType.name} button',
             constraints: const BoxConstraints(minWidth: 200),
-            child: FlutterBaseCodeButton(
+            child: AppButton(
               text: 'Button',
               isEnabled: false,
               isExpanded: true,

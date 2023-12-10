@@ -40,13 +40,9 @@ class ConfirmationDialog extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: AppTheme.defaultBoardRadius,
         ),
-        title: title != null
-            ? Text(title!, style: context.textTheme.titleMedium)
-            : null,
+        title: title != null ? Text(title!, style: context.textTheme.titleMedium) : null,
         content: Padding(
-          padding: title != null
-              ? EdgeInsets.zero
-              : const EdgeInsets.only(top: Insets.xxsmall),
+          padding: title != null ? EdgeInsets.zero : const EdgeInsets.only(top: Insets.xxsmall),
           child: Text(
             message,
             style: context.textTheme.bodyMedium?.copyWith(
@@ -55,7 +51,7 @@ class ConfirmationDialog extends StatelessWidget {
           ),
         ),
         actions: <Widget>[
-          FlutterBaseCodeButton(
+          AppButton(
             text: negativeButtonText ?? context.l10n.common_no.toUpperCase(),
             buttonType: ButtonType.text,
             onPressed: onNegativePressed ?? () => Navigator.of(context).pop(),
@@ -65,7 +61,7 @@ class ConfirmationDialog extends StatelessWidget {
               color: negativeButtonTextColor ?? context.colorScheme.primary,
             ),
           ),
-          FlutterBaseCodeButton(
+          AppButton(
             text: positiveButtonText ?? context.l10n.common_yes.toUpperCase(),
             buttonType: ButtonType.text,
             onPressed: onPositivePressed ?? () => Navigator.of(context).pop(),

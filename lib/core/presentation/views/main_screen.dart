@@ -20,12 +20,9 @@ class MainScreen extends HookWidget {
   final StatefulNavigationShell navigationShell;
 
   void _initScrollControllers(BuildContext context) {
-    final Map<AppScrollController, ScrollController> controllers =
-        <AppScrollController, ScrollController>{};
-    for (final AppScrollController appScrollController
-        in AppScrollController.values) {
-      final ScrollController scrollController =
-          ScrollController(debugLabel: appScrollController.name);
+    final Map<AppScrollController, ScrollController> controllers = <AppScrollController, ScrollController>{};
+    for (final AppScrollController appScrollController in AppScrollController.values) {
+      final ScrollController scrollController = ScrollController(debugLabel: appScrollController.name);
       scrollController.addListener(
         () => _addListener(scrollController, context.read<HidableBloc>()),
       );
@@ -38,11 +35,9 @@ class MainScreen extends HookWidget {
     ScrollController scrollController,
     HidableBloc hidableBloc,
   ) {
-    if (scrollController.position.userScrollDirection ==
-        ScrollDirection.forward) {
+    if (scrollController.position.userScrollDirection == ScrollDirection.forward) {
       hidableBloc.setVisibility(isVisible: true);
-    } else if (scrollController.position.userScrollDirection ==
-        ScrollDirection.reverse) {
+    } else if (scrollController.position.userScrollDirection == ScrollDirection.reverse) {
       hidableBloc.setVisibility(isVisible: false);
     }
   }
@@ -63,7 +58,7 @@ class MainScreen extends HookWidget {
         body: Center(
           child: navigationShell,
         ),
-        bottomNavigationBar: FlutterBaseCodeNavBar(
+        bottomNavigationBar: AppNavBar(
           navigationShell: navigationShell,
         ),
         backgroundColor: context.colorScheme.background,

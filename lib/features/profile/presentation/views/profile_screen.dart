@@ -36,25 +36,21 @@ class ProfileScreen extends HookWidget {
       backgroundColor: context.colorScheme.background,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(AppTheme.defaultAppBarHeight),
-        child: FlutterBaseCodeAppBar(
+        child: AppAppBar(
           titleColor: context.colorScheme.primary,
           actions: <Widget>[
             IconButton(
-              onPressed: () => context
-                  .read<ThemeBloc>()
-                  .switchTheme(Theme.of(context).brightness),
+              onPressed: () => context.read<ThemeBloc>().switchTheme(Theme.of(context).brightness),
               icon: Theme.of(context).brightness == Brightness.dark
                   ? Icon(Icons.light_mode, color: iconColor)
                   : Icon(Icons.dark_mode, color: iconColor),
             ),
             BlocBuilder<AuthBloc, AuthState>(
-              builder: (BuildContext context, AuthState state) =>
-                  state.maybeWhen(
+              builder: (BuildContext context, AuthState state) => state.maybeWhen(
                 orElse: SizedBox.shrink,
                 authenticated: (User user) => GestureDetector(
-                  onTap: () =>
-                      GoRouter.of(context).goNamed(RouteName.profile.name),
-                  child: FlutterBaseCodeAvatar(
+                  onTap: () => GoRouter.of(context).goNamed(RouteName.profile.name),
+                  child: AppAvatar(
                     size: 32,
                     imageUrl: user.avatar?.getOrCrash(),
                     padding: const EdgeInsets.all(Insets.small),
@@ -72,8 +68,7 @@ class ProfileScreen extends HookWidget {
           ),
           child: RefreshIndicator(
             onRefresh: () => context.read<AuthBloc>().getUser(),
-            child: BlocSelector<AppCoreBloc, AppCoreState,
-                Map<AppScrollController, ScrollController>>(
+            child: BlocSelector<AppCoreBloc, AppCoreState, Map<AppScrollController, ScrollController>>(
               selector: (AppCoreState state) => state.scrollControllers,
               builder: (
                 BuildContext context,
@@ -81,21 +76,18 @@ class ProfileScreen extends HookWidget {
               ) =>
                   CustomScrollView(
                 physics: const AlwaysScrollableScrollPhysics(),
-                controller: scrollControllers.isNotEmpty
-                    ? scrollControllers[AppScrollController.profile]
-                    : ScrollController(),
+                controller:
+                    scrollControllers.isNotEmpty ? scrollControllers[AppScrollController.profile] : ScrollController(),
                 slivers: <Widget>[
                   SliverFillRemaining(
                     child: BlocConsumer<AuthBloc, AuthState>(
-                      listener: (BuildContext context, AuthState state) =>
-                          _onStateChangedListener(
+                      listener: (BuildContext context, AuthState state) => _onStateChangedListener(
                         context,
                         state,
                         isDialogShowing,
                       ),
                       buildWhen: _buildWhen,
-                      builder: (BuildContext context, AuthState authState) =>
-                          authState.maybeWhen(
+                      builder: (BuildContext context, AuthState authState) => authState.maybeWhen(
                         orElse: () => const ProfileLoading(),
                         authenticated: (User user) => Padding(
                           padding: const EdgeInsets.symmetric(
@@ -112,12 +104,11 @@ class ProfileScreen extends HookWidget {
                                   ],
                                 ),
                               ),
-                              FlutterBaseCodeButton(
+                              AppButton(
                                 text: context.l10n.profile__button_text__logout,
                                 isExpanded: true,
                                 buttonType: ButtonType.filled,
-                                onPressed: () =>
-                                    context.read<AuthBloc>().logout(),
+                                onPressed: () => context.read<AuthBloc>().logout(),
                                 padding: EdgeInsets.zero,
                                 contentPadding: const EdgeInsets.symmetric(
                                   vertical: Insets.small,
@@ -176,27 +167,27 @@ class _ProfileDetails extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Gap.small(),
-          FlutterBaseCodeInfoTextField(
+          AppInfoTextField(
             title: context.l10n.profile__label_text__email,
             description: user.email.getOrCrash(),
           ),
           Gap.small(),
-          FlutterBaseCodeInfoTextField(
+          AppInfoTextField(
             title: context.l10n.profile__label_text__phone_number,
             description: user.contactNumber.getOrCrash(),
           ),
           Gap.small(),
-          FlutterBaseCodeInfoTextField(
+          AppInfoTextField(
             title: context.l10n.profile__label_text__gender,
             description: user.gender.name.capitalize(),
           ),
           Gap.small(),
-          FlutterBaseCodeInfoTextField(
+          AppInfoTextField(
             title: context.l10n.profile__label_text__birthday,
             description: user.birthday.defaultFormat(),
           ),
           Gap.small(),
-          FlutterBaseCodeInfoTextField(
+          AppInfoTextField(
             title: context.l10n.profile__label_text__age,
             description: user.age,
           ),
@@ -219,7 +210,7 @@ class _ProfileName extends StatelessWidget {
 
     return Row(
       children: <Widget>[
-        FlutterBaseCodeAvatar(
+        AppAvatar(
           size: 80,
           imageUrl: user.avatar?.getOrCrash(),
         ),

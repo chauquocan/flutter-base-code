@@ -7,7 +7,7 @@ import 'package:mocktail_image_network/mocktail_image_network.dart';
 import '../../../utils/test_utils.dart';
 
 void main() {
-  group('FlutterBaseCodeAvatar Widget Tests', () {
+  group('AppAvatar Widget Tests', () {
     goldenTest(
       'renders correctly',
       fileName: 'flutter_base_code_avatar'.goldensVersion,
@@ -20,13 +20,13 @@ void main() {
         children: <Widget>[
           GoldenTestScenario(
             name: 'without image url',
-            child: const FlutterBaseCodeAvatar(
+            child: const AppAvatar(
               size: 50,
             ),
           ),
           GoldenTestScenario(
             name: 'with image url',
-            child: const FlutterBaseCodeAvatar(
+            child: const AppAvatar(
               size: 50,
               imageUrl: 'https://fakeurl.com/image.png',
             ),

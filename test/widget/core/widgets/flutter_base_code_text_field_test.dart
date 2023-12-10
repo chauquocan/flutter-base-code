@@ -19,14 +19,13 @@ void main() {
     focusNode.dispose();
   });
 
-  group('FlutterBaseCodeTextField Widget Tests', () {
-    GoldenTestGroup buildTextFieldTestGroup({bool isPassword = false}) =>
-        GoldenTestGroup(
+  group('AppTextField Widget Tests', () {
+    GoldenTestGroup buildTextFieldTestGroup({bool isPassword = false}) => GoldenTestGroup(
           children: <Widget>[
             GoldenTestScenario(
               name: 'default',
               constraints: const BoxConstraints(minWidth: 200),
-              child: FlutterBaseCodeTextField(
+              child: AppTextField(
                 controller: controller,
                 labelText: 'Label',
                 isPassword: isPassword,
@@ -39,7 +38,7 @@ void main() {
                 builder: (BuildContext context) {
                   focusNode.requestFocus();
 
-                  return FlutterBaseCodeTextField(
+                  return AppTextField(
                     controller: controller,
                     labelText: 'Label',
                     hintText: 'hint',
@@ -57,7 +56,7 @@ void main() {
                 builder: (BuildContext context) {
                   focusNode.requestFocus();
 
-                  return FlutterBaseCodeTextField(
+                  return AppTextField(
                     controller: controller,
                     labelText: 'Label',
                     isPassword: isPassword,
@@ -70,7 +69,7 @@ void main() {
             GoldenTestScenario(
               name: 'with value',
               constraints: const BoxConstraints(minWidth: 200),
-              child: FlutterBaseCodeTextField(
+              child: AppTextField(
                 controller: TextEditingController(text: 'Value'),
                 labelText: 'Label',
                 isPassword: isPassword,
@@ -84,7 +83,7 @@ void main() {
                 builder: (BuildContext context) {
                   focusNode.requestFocus();
 
-                  return FlutterBaseCodeTextField(
+                  return AppTextField(
                     controller: TextEditingController(text: 'Value'),
                     labelText: 'Label',
                     isPassword: isPassword,
